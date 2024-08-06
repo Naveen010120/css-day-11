@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>star task</title>
+    <style>
+        img{
+            width: 20vw;
+            margin-top: 20vh;
+            margin-left: 20vw;
+            margin-top: 10vh;
+        }
+        button{
+           margin-left: 20px;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            margin-top: 5vh;
+        }
+        .Rotate:focus-within ~ .star{
+            transform: rotateY(360deg);
+            transition:  3s;
+        }
+        .Rotate:focus-within ~ .star1{
+            transform: rotateZ(360deg);
+            transition:  3s;
+        }
+        .Scale:focus-within ~ .star{
+            transform: scale(2,2);
+            transition:  2s;
+        }
+        .Scale:focus-within ~ .star1{
+            transform: scale(3,3);
+            transition:  2s;
+        }
+        .Translate:focus-within ~ .star{
+            transition: 2s;
+            transform: translate(300px,330px);
+        }
+        .Translate:focus-within ~ .star1{
+            transition: 2s;
+            transform: translate(100px,100px);
+        }
+        .Skew:focus-within ~ .star{
+            transform: skew(90deg,90deg);
+            transition: 5s;
+        }
+        .Skew:focus-within ~ .star1{
+            transform: skew(30deg,60deg);
+            transition: 5s;
+        }
+        .container{
+            width: 100vw;
+           
+            height: 40vh;
+        }
+        .image{
+            width: 150vh;
+            margin: 0px;
+            height: 60vh;
+        }
+        body{
+            background-color: black;
+        }
+        @media screen and (min-width:425px) and (max-width:769px){
+            .container{
+            width: 70vw;
+            border: 2px solid;
+            height: 40vh;
+        }
+        .image{
+            width: 150vh;
+            margin: 0px;
+            height: 40vh;
+        }   img{
+            width: 10vw;
+            margin-top: 5vh;
+            margin-left: 20vw;
+        }
+        button{
+           padding: 10px;
+           margin-left: 20px;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            
+        }
+        }
+        @media screen and (min-width:769px){
+            .container{
+            width: 70vw;
+            border: 2px solid;
+            height: 50vh;
+        }
+        .image{
+            width: 150vh;
+            margin: 0px;
+            height: 50vh;
+        }
+        img{
+            width: 8vw;
+            margin-top: 10vh;
+            margin-left: 20vw;
+        }
+        button{
+            padding: 10px;
+            font-size: 15px;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            margin-left: 50px;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <button class="Translate">Translate</button>
+    <button class="Rotate">Rotate</button>
+    <button class="Scale">Scale</button>
+    <button class="Skew">Skew</button>
+    <br>
+    <img src="./star.webp" alt="" class="star" > 
+    <img src="./star.webp" alt=""  class="star1">
+    </div>
+    <img src="./boy1.avif" alt="" class="image">
+</body>
+</html>
